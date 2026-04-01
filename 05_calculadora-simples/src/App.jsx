@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { Pressable, StyleSheet, Text, View, TextInput } from 'react-native';
+import { Pressable, Text, View, TextInput } from 'react-native';
 import { useState } from 'react';
 import $ from './styles'
 
@@ -46,25 +46,25 @@ export default function App() {
           style={$.button}
           onPress={sum}
         >
-          <Text>+</Text>
+          <Text style={$.button_text}>+</Text>
         </Pressable>
         <Pressable 
           style={$.button}
           onPress={subtract}
         >
-          <Text>-</Text>
+          <Text style={$.button_text}>-</Text>
         </Pressable>
         <Pressable 
           style={$.button}
           onPress={multiply}
         >
-          <Text>×</Text>
+          <Text style={$.button_text}>×</Text>
         </Pressable>
         <Pressable 
           style={$.button}
           onPress={divide}
         >
-          <Text>÷</Text>
+          <Text style={$.button_text}>÷</Text>
         </Pressable>
       </View>
       {result !== null && (
