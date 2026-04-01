@@ -1,20 +1,42 @@
+import $ from './styles';
+import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { Pressable, TextInput, Text, View } from 'react-native';
 
 export default function App() {
+  const [text, changeText] = useState('')
+  const [result, changeResult] = useState(null)
+
+  const capitalize = () => changeResult(text.toUpperCase())
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <SafeAreaView style={$.container}>
       <StatusBar style="auto" />
-    </View>
+      <View style={$.header}>
+        <Text style={$.title}>Capitalizador de Texto</Text>
+        <Text style={$.desc}>
+          Converte todas as letras de um texto para maiúsculas.
+        </Text>
+      </View>
+      <View style={$.main}>
+        <TextInput 
+          placeholder="Digite um texto qualquer..."
+          placeholderTextColor="#a9a9a9"
+          onChangeText={(t) => changeText(t)}
+          defaultValue={text}
+          style={$.input}
+        />
+        <Pressable style={$.button} onPress={capitalize}>
+          <Text style={$.button_text}>Capitalizar</Text>
+        </Pressable>
+      </View>
+      {result !== null && (
+        <View style={$.result_wrapper}>
+          <Text style={$.result_label}>Texto convertido:</Text>
+          <Text style={$.result}>{result}</Text>
+        </View>
+      )}
+    </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
