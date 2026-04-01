@@ -16,8 +16,8 @@ export default function App() {
       <StatusBar style="auto" />
       
       <View style={$.header}>
-        <Text style={$.title}>Calculadora Simples</Text>
-        <Text style={$.desc}>Conversor de temperaturas Celsius/Fahrenheit.</Text>
+        <Text style={$.title}>Conversor de Temperatura</Text>
+        <Text style={$.desc}>Converte de Celsius para Fahrenheit, e vice-versa.</Text>
       </View>
       
       <View style={$.main}>
