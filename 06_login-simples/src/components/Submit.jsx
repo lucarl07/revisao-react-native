@@ -10,4 +10,17 @@ const Submit = ({ action }) => {
 
 export default Submit
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  button: {
+    padding: 16,
+    width: 140,
+    borderRadius: 32,
+    backgroundColor: '#395fa5'
+  },
+  text: {
+    textAlign: 'center',
+    fontWeight: 600,
+    fontSize: 18,
+    color: '#fff'
+  }
+})

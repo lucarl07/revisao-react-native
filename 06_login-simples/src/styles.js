@@ -6,7 +6,7 @@ const views = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
+  }
 });
 
 export default StyleSheet.flatten([views]);

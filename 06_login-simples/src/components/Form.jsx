@@ -1,5 +1,4 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
 
 const Form = ({ children }) => {
   return (
@@ -11,4 +10,10 @@ const Form = ({ children }) => {
 
 export default Form
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  form: {
+    marginBlock: 48,
+    alignItems: 'center',
+    gap: 24
+  }
+})

@@ -1,5 +1,4 @@
 import { StyleSheet, Text, TextInput, View } from 'react-native'
-import React from 'react'
 
 const FormInput = ({label, error, ...inputProps}) => {
   return (
@@ -17,5 +16,22 @@ const FormInput = ({label, error, ...inputProps}) => {
 export default FormInput
 
 const styles = StyleSheet.create({
-
+  container: {
+    display: 'flex',
+    gap: 8
+  },
+  label: {
+    color: '#395fa5'
+  },
+  input: {
+    width: 240,
+    backgroundColor: '#e8e8e8',
+    borderBottomColor: '#395fa5',
+    borderBottomWidth: 1,
+    borderTopLeftRadius: 8,
+    borderTopRightRadius: 8,
+  },
+  error: {
+    color: '#bb4254'
+  }
 })
