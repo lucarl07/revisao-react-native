@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Pressable, StyleSheet, Text, View, TextInput } from 'react-native';
 import { useState } from 'react';
+import $ from './styles'
 
 export default function App() {
   const [numA, setNumA] = useState(null)
@@ -75,22 +76,3 @@ export default function App() {
     </SafeAreaView>
   );
 }
-
-const $ = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  header: {
-    alignItems: 'center'
-  },
-  title: {
-    fontSize: 32,
-    fontWeight: 700
-  },
-  desc: {
-    fontSize: 16
-  },
-});
