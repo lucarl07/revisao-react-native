@@ -9,6 +9,7 @@ import $ from './styles'
 import Form from './components/Form';
 import Submit from './components/Submit';
 import FormInput from './components/FormInput';
+import Title from './components/Title';
 
 function defReducer(prev, next) {
   return { ...prev, ...next }
@@ -37,7 +38,7 @@ export default function App() {
       setFormErrors({ password: 'Digite a sua senha.' })
     } else if (!formState.password.match(passwordRegEx)) {
       // Senha com menos de 8 caracteres e/ou sem ao menos um número, letra maiúscula ou letra minúscula.
-      setFormErrors({ password: 'Digite uma senha com ao menos: \n- uma letra maiúscula \n- uma letra minúscula \n- um número \nE totalizando 8 caracteres.' })
+      setFormErrors({ password: 'Digite uma senha com ao menos: \n • uma letra maiúscula \n • uma letra minúscula \n • um número \nE totalizando 8 caracteres.' })
     } else {
       setFormErrors({ password: '' })
     }
@@ -46,7 +47,7 @@ export default function App() {
   return (
     <SafeAreaView style={$.app}>
       <StatusBar style="auto" />
-      <Text style={$.title}>Faça login no Portal do Aluno</Text>
+      <Title value="Acesse o Portal do Aluno" />
       <Form>
         <FormInput
           label="E-mail:"
